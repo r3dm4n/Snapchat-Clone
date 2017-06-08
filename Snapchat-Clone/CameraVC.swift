@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate {
 
@@ -15,13 +16,16 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate {
     @IBOutlet weak var previewView: AAPLPreviewView!
     
     override func viewDidLoad() {
-
-
         delegate = self
         self._previewView = previewView
     super.viewDidLoad()
-
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        guard Auth.auth().currentUser != nil else {
+            performSegue(withIdentifier: "LoginVC", sender: nil)
+            return
+        }
     }
 
     @IBAction func changeCameraActionPressed(_ sender: Any) {

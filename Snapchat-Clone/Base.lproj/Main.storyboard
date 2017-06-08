@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,15 +64,157 @@
                         <outlet property="cameraBtn" destination="8Rw-G3-7Vg" id="FGj-P4-jx8"/>
                         <outlet property="previewView" destination="lRs-IS-SVg" id="H13-Pu-XlQ"/>
                         <outlet property="recordBtn" destination="vN5-kI-0u5" id="zw2-9S-jr4"/>
+                        <segue destination="Bqu-Ha-bIx" kind="presentation" identifier="LoginVC" id="lMG-Uj-U0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
+        <!--LoginVC-->
+        <scene sceneID="mmy-jk-Rwh">
+            <objects>
+                <viewController id="Bqu-Ha-bIx" customClass="LoginVC" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="41D-zy-i4K"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Nl-FK-PUj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G2D-N2-JN8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes" translatesAutoresizingMaskIntoConstraints="NO" id="GcO-eJ-gBv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCi-dx-NPi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.32819361468545755" green="0.664395361008987" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpG-YT-FQb">
+                                <rect key="frame" x="54.5" y="130" width="267" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-mountains-white" translatesAutoresizingMaskIntoConstraints="NO" id="tVv-5J-S8D">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="265" id="FAM-R6-ddS"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="hrQ-Lx-nxq"/>
+                                            <constraint firstAttribute="height" constant="64" id="kBQ-gq-c0f"/>
+                                            <constraint firstAttribute="width" constant="100" id="qhN-hy-D4J"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="snapchat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W7-o5-4eL">
+                                        <rect key="frame" x="100" y="0.0" width="167" height="64"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSX-eF-MOR" customClass="RoundTextField" customModule="Snapchat_Clone" customModuleProvider="target">
+                                <rect key="frame" x="55" y="249" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="L3v-LR-teo"/>
+                                    <constraint firstAttribute="width" constant="265" id="zFw-ad-GiF"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.76078431372549016" green="0.95294117647058818" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7q-6L-5wI" customClass="RoundTextField" customModule="Snapchat_Clone" customModuleProvider="target">
+                                <rect key="frame" x="55" y="311" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="1cn-rF-bzT"/>
+                                    <constraint firstAttribute="height" constant="42" id="9rh-2V-j9a"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.76078431369999999" green="0.95294117649999999" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaB-pn-XwT" customClass="RoundedButton" customModule="Snapchat_Clone" customModuleProvider="target">
+                                <rect key="frame" x="55" y="373" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="Mhr-Yn-MIa"/>
+                                    <constraint firstAttribute="height" constant="42" id="mhq-ML-9u7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" red="0.32819361470000002" green="0.66439536099999996" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Nl-FK-PUj" firstAttribute="top" secondItem="GcO-eJ-gBv" secondAttribute="bottom" id="3Sm-F9-0ZB"/>
+                            <constraint firstItem="NCi-dx-NPi" firstAttribute="top" secondItem="G2D-N2-JN8" secondAttribute="top" id="A45-Mm-NKK"/>
+                            <constraint firstAttribute="trailing" secondItem="GcO-eJ-gBv" secondAttribute="trailing" id="DRC-Ce-Y05"/>
+                            <constraint firstItem="NCi-dx-NPi" firstAttribute="leading" secondItem="G2D-N2-JN8" secondAttribute="leading" id="I4d-8S-ZBJ"/>
+                            <constraint firstItem="TSX-eF-MOR" firstAttribute="centerX" secondItem="G2D-N2-JN8" secondAttribute="centerX" id="JRA-dt-eUb"/>
+                            <constraint firstAttribute="trailing" secondItem="GcO-eJ-gBv" secondAttribute="trailing" id="OFC-j4-Lp4"/>
+                            <constraint firstItem="3Nl-FK-PUj" firstAttribute="top" secondItem="GcO-eJ-gBv" secondAttribute="bottom" id="Sy7-0H-JS4"/>
+                            <constraint firstAttribute="trailing" secondItem="NCi-dx-NPi" secondAttribute="trailing" id="ZlB-jg-b67"/>
+                            <constraint firstItem="GcO-eJ-gBv" firstAttribute="top" secondItem="G2D-N2-JN8" secondAttribute="top" id="aRX-Ej-9fA"/>
+                            <constraint firstItem="GcO-eJ-gBv" firstAttribute="leading" secondItem="G2D-N2-JN8" secondAttribute="leading" id="dNH-TU-BXL"/>
+                            <constraint firstItem="Z7q-6L-5wI" firstAttribute="top" secondItem="TSX-eF-MOR" secondAttribute="bottom" constant="20" id="hXt-LY-rgT"/>
+                            <constraint firstItem="3Nl-FK-PUj" firstAttribute="top" secondItem="NCi-dx-NPi" secondAttribute="bottom" id="hmc-ZK-sJN"/>
+                            <constraint firstItem="BaB-pn-XwT" firstAttribute="top" secondItem="Z7q-6L-5wI" secondAttribute="bottom" constant="20" id="hrA-CT-HNH"/>
+                            <constraint firstItem="TSX-eF-MOR" firstAttribute="top" secondItem="bpG-YT-FQb" secondAttribute="bottom" constant="55" id="jhJ-yW-2wh"/>
+                            <constraint firstItem="bpG-YT-FQb" firstAttribute="top" secondItem="41D-zy-i4K" secondAttribute="bottom" constant="110" id="lMs-lQ-GHE"/>
+                            <constraint firstItem="Z7q-6L-5wI" firstAttribute="centerX" secondItem="G2D-N2-JN8" secondAttribute="centerX" id="rB6-9a-rQb"/>
+                            <constraint firstItem="BaB-pn-XwT" firstAttribute="centerX" secondItem="G2D-N2-JN8" secondAttribute="centerX" id="s0X-kC-DuN"/>
+                            <constraint firstItem="bpG-YT-FQb" firstAttribute="centerX" secondItem="G2D-N2-JN8" secondAttribute="centerX" id="uLS-M6-bhD"/>
+                            <constraint firstItem="GcO-eJ-gBv" firstAttribute="top" secondItem="G2D-N2-JN8" secondAttribute="top" id="w65-yM-hp8"/>
+                            <constraint firstItem="GcO-eJ-gBv" firstAttribute="leading" secondItem="G2D-N2-JN8" secondAttribute="leading" id="zNm-JL-yxA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFM-rM-Uae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893.60000000000002" y="136.28185907046478"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera_icon_snap" width="29" height="24"/>
         <image name="createsnap_btn" width="30" height="30"/>
+        <image name="devslopes" width="1080" height="1349"/>
+        <image name="devslopes-mountains-white" width="451" height="335"/>
     </resources>
 </document>
