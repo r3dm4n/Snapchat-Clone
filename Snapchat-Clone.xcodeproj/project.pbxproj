@@ -19,6 +19,7 @@
 		BEAEF9091EE9152C004F96D6 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAEF9081EE9152C004F96D6 /* RoundTextField.swift */; };
 		BEAEF90B1EE919E7004F96D6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAEF90A1EE919E7004F96D6 /* RoundedButton.swift */; };
 		BEAEF90D1EE91D48004F96D6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAEF90C1EE91D48004F96D6 /* LoginVC.swift */; };
+		BEAEF9101EE927CA004F96D6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAEF90F1EE927CA004F96D6 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BEAEF9081EE9152C004F96D6 /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		BEAEF90A1EE919E7004F96D6 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BEAEF90C1EE91D48004F96D6 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BEAEF90F1EE927CA004F96D6 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		BE5EF3D71EE7DDDC00443F42 /* Snapchat-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BEAEF90E1EE927BA004F96D6 /* Services */,
 				BE8E9B161EE8147000D41866 /* Protocols */,
 				BE8E9B151EE813FB00D41866 /* Controller */,
 				BE8E9B141EE813F500D41866 /* View */,
@@ -127,6 +130,14 @@
 				BE8E9B171EE8147A00D41866 /* AAPLCameraVCDelegate.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		BEAEF90E1EE927BA004F96D6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BEAEF90F1EE927CA004F96D6 /* AuthService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		D0EFF3A436BB97BDC24AFE1E /* Pods */ = {
@@ -271,6 +282,7 @@
 				BEAEF9091EE9152C004F96D6 /* RoundTextField.swift in Sources */,
 				BE8E9B111EE813DD00D41866 /* AAPLCameraViewController.m in Sources */,
 				BE8E9B121EE813DD00D41866 /* AAPLPreviewView.m in Sources */,
+				BEAEF9101EE927CA004F96D6 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
