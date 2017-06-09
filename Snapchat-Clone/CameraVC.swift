@@ -22,10 +22,11 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        guard Auth.auth().currentUser != nil else {
-            performSegue(withIdentifier: "LoginVC", sender: nil)
-            return
-        }
+        performSegue(withIdentifier: "LoginVC", sender: nil)
+//        guard Auth.auth().currentUser != nil else {
+//            performSegue(withIdentifier: "LoginVC", sender: nil)
+//            return
+//        }
     }
 
     @IBAction func changeCameraActionPressed(_ sender: Any) {
